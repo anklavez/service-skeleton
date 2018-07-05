@@ -39,8 +39,12 @@ spring:
                     brokers: localhost
                     zk-nodes: localhost
             bindings:
-                output:
-                    destination: topic-jhipster
+                messageChannel:
+                    destination: greetings
+                    content-type: application/json
+                subscribableChannel:
+                    destination: greetings
+
     mail:
         host: localhost
         port: 25
